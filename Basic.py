@@ -12,6 +12,7 @@ Practical Code Examples
 Syntax refers to the set of rules that defines the combinations of symbols that are considered to be correctly structured programs in a language. In simpler terms, syntax is about the correct arrangement of words and symbols in a code.
 
 Semantics refers to the meaning or the interpretation of the symbols, characters, and commands in a language. It is about what the code is supposed to do when it runs.'''
+from pickle import APPEND
 from time import process_time_ns
 
 ##python is case sensitive
@@ -400,4 +401,266 @@ from time import process_time_ns
 #     print('a is greater than b')
 # else:
 #     print('a is less than b')
+
+
+# print(bool("ashok"))
+
+# class myclass():
+#   def __len__(self):
+#     return 0
+#
+# myobj = myclass()
+# print(bool(myobj))
+
+# class myclass():
+#     def __len__(self):
+#         return 0
+# myobj = myclass()
+# print(bool(myobj))
+
+
+# def my_class():
+#     return False
+#
+# x = my_class()
+# print(x)
+
+
+# def my_job():
+#     return True
+#
+# if my_job():
+#     print("YES")
+# else:
+#     print("NO")
+
+
+# x = 200
+# print(isinstance(x, int))
+
+#List
+
+# mylist = ["apple", "banana", "cherry"]
+# print(mylist)
+# mylist[4]="ashok"
+# print(mylist)
+# print(len(mylist))
+#
+# myboollist=[True, False,True,False]
+# print(myboollist)
+# myintlist=[1,2,3]
+# print(myintlist)
+#
+# list1 = ["abc", 34, True, 40, "male"]
+# print(list1)
+#
+# print(type(list1))
+
+# list()Constructor
+
+# thislist = list(("apple", "banana", "cherry")) # note the double round-brackets
+# print(thislist)
+
+# thislist = ["apple", "banana", "cherry"]
+# print(thislist[1])
+
+# thislit= ["a","b","c","d","e","f"]
+# print(thislit[2:5])
+# thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+# print(thislist[:4])
+
+# thislist = ["apple", "banana", "cherry"]
+# if "apple" in thislist:
+#   print("Yes, 'apple' is in the fruits list")
+
+# Python - Change List Items
+
+# thislist = ["a", "b", "c", "d", "e", "f", "g", "h"]
+# thislist2 = [1, 2, 3, 4, 5, 6, 7, 8]
+# thislist[2]=2;
+# print(thislist)
+# print(thislist2)
+
+# thislist = ["apple", "banana", "cherry", "orange", "kiwi", "mango"]
+# thislist[1:3] = ["blackcurrant", "watermelon"]
+# print(thislist)
+
+# thislist = ["apple", "banana", "cherry"]
+# thislist[1:2] = ["blackcurrant", "watermelon"]
+# print(thislist)
+# thislist = ["apple", "banana", "cherry"]
+# thislist[1:3] = ["watermelon"]
+# print(thislist)
+
+# Insert Items
+# thislist=["a","b","c","d","e","f"]
+# thislist.insert(0,"f")
+# print(thislist)
+# Python - Add List Items
+# Append Items
+# To add an item to the end of the list, use the append() method:
+# thislist = ["a", "b", "c", "d", "e", "f", "g", "h"]
+# thislist.append('i')
+# print(thislist)
+
+# Extend List
+
+# thislist = ["a", "b", "c", "d", "e", "f", "g", "h"]
+# thislist2 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# thislist.extend(thislist2)
+# print(thislist)
+
+# Python - Remove List Items
+# thislist = ["a", "b", "c", "d", "e", "f", "g", "h"]
+# thislist.remove("c")
+# print(thislist)
+
+# Remove Specified Index
+# The pop() method removes the specified index.
+
+# thislist = ["apple", "banana", "cherry", "orange", "strawberry"]
+# thislist.pop(4)
+# print(thislist)
+
+# thislist = ["apple", "banana", "cherry"]
+# del thislist[0]
+# print(thislist)
+
+# Python - Loop Lists
+# thislist = ["a", "b", "c", "d", "e", "f", "g", "h"]
+# for x in thislist:
+#     print(x)
+
+# thislist = ["a", "b", "c", "d", "e", "f", "g", "h"]
+# for x in range(len(thislist)):
+#     print(thislist[x])
+
+# Using a While Loop
+# You can loop through the list items by using a while loop
+
+# thislist = ["a", "b", "c", "d", "e", "f", "g", "h"]
+# x=0
+# while x<len(thislist):
+#     print(thislist[x])
+#     x+=1
+
+# Looping Using List Comprehension
+# thislist = ["apple", "banana", "cherry"]
+# [print(x) for x in thislist]
+
+# thislist = ["a", "b", "c", "d", "e", "f", "g", "h"]
+# thislist2 = []
+# thislist3 = []
+# for x in range(len(thislist)):
+#     if "a" in thislist[x]:
+#       thislist2.append(thislist[x])
+#
+#
+# print(thislist2)
+
+# fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+# newlist = [x for x in fruits if "a" in x]
+#
+# print(newlist)
+
+# newlist=[x for x in range(20)]
+# print(newlist)
+
+# Sort List Alphanumerically
+# thislist=["apple","banana","orange","strawberry","mango"]
+# thislist.sort()
+# print(thislist)
+
+
+# num=[234,2,43,5,123,53,1,423]
+# num.sort()
+# print(num)
+
+# Sort Descending
+# To sort descending, use the keyword argument reverse = True:
+
+# thislist = ["a", "b", "c", "d", "e", "f", "g", "h"]
+# thislist.sort(reverse=True)
+# print(thislist)
+
+# Customize Sort Function
+# You can also customize your own function by using the keyword argument key = function.
+
+# def myfun(n):
+#     return abs(n-50)
+#
+# thislist=[100,50,65,82,23]
+# thislist.sort(key=myfun)
+# print(thislist)
+
+
+# thislist = ["a", "b", "c", "d", "e", "f", "g", "h"]
+# thislist.sort(reverse=True)
+# print(thislist)
+
+# def myfun(n):
+#     return abs(n-50)
+#
+# list=[50,234,23,23,234,2]
+# list.sort(key=myfun)
+# print(list)
+
+# thislist = ["apple", "Banana", "cherry"]
+# thislist.sort(key = str.lower)
+# print(thislist)
+# thislist = ["banana", "Orange", "Kiwi", "cherry"]
+# thislist.sort(key = str.lower)
+# print(thislist)
+
+# Copy Lists
+
+# You cannot copy a list simply by typing list2 = list1, because: list2 will only be a reference to list1, and changes made in list1 will automatically also be made in list2.
+
+# Use the copy() method
+# You can use the built-in List method copy() to copy a list.
+
+# thislist = ["a", "b", "c", "d", "e", "f", "g", "h"]
+# copylist=thislist.copy()
+# print(thislist)
+# print(copylist)
+
+# Use the list() method
+# Another way to make a copy is to use the built-in method list().
+
+# thislist = ["apple", "banana", "cherry"]
+# mylist = list(thislist)
+# print(mylist)
+
+# Use the slice Operator
+# You can also make a copy of a list by using the : (slice) operator.
+
+# thislist = ["a", "b", "c", "d", "e", "f", "g", "h"]
+# mylist=thislist[:]
+# print(thislist)
+# print(mylist)
+
+# Python - Join Lists
+# list1 = ["a", "x", "c"]
+# list2 = [1, 20, 3]
+# list3 = list1 + list2
+#
+# print(list3)
+
+# APPEND
+
+# list=['1','2','3','4','5','6','7','8','9']
+# list2=['1','2','3']
+# for x in list2:
+#     list.append(x)
+#
+# print(list)
+
+# list1=['a','b','c']
+# list2=['1','4','c']
+# list1.extend(list2)
+# print(list1)
+
+
+
+
 
